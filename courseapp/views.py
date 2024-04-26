@@ -77,13 +77,29 @@ def delete_badge(request, id):
     badge.delete()
     messages.info(request, 'Badge deleted successfully')
     return redirect('view_badges')
-# Compare this snippet from courseapp/urls.py:
 
-# """
-# URL configuration for courseapp app.
-# """
-# from django.urls import path
-# from . import views
-#
-# urlpatterns = [
-#     path('add-lesson/', views.add_lesson, name='add_lesson'),
+@login_required
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
+@login_required
+def lesson(request):
+    return render(request, 'lesson.html')
+
+@login_required
+def badge(request):
+    return render(request, 'badge.html')
+
+@login_required
+def certificate(request):
+    return render(request, 'certificate.html')
+
+@login_required
+def quizes(request):
+    return render(request, 'quizes.html')
+
+@login_required
+def lessonquiz(request):
+    return render(request, 'lessonquiz.html')
+
+# Compare this snippet from courseapp/forms.py:
