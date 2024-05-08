@@ -1,2 +1,4 @@
 django
 mysqlclient
+
+https://github.com/sanbabyfrancis/certificate-generator/tree/main 
